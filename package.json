@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "install": "cd server && yarn && cd .. && cd client && yarn && cd ..",
+    "start": "concurrently \"cd server && node server.js\" \"cd client && yarn start\""
+  },
   "dependencies": {
-    "axios": "^0.19.0",
-    "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "concurrently": "^5.0.2"
   }
 }
